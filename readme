@@ -5,6 +5,13 @@ Customer  and  administrator registration  are working but i got an small proble
 the problem is related with modelState.IsValid and is in AccountController\ Register Action so i commented
 (bad practice) is just to let you test the web site
 
+Login 
+codeLouisville1@gmail.com User ////// Add to cart and details
+codeLouisville2@gmail.com Admin //// Edit Details And Delete
+
+Password
+codeLouisville@1
+
 
 This web site is not responsive , so in my github account there is another project call
 CoffeShop that is responsive
