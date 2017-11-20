@@ -1,0 +1,109 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")   
+   
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="row">
+            <div id="navtop" class="navbar-header col-md-12">
+                <div class="col-md-2">
+                    <a href='@Url.Action("ProductsList", "Product")'>
+                        <img id="logo" src='@Url.Content("~/Images/General/onlineStore.png")' />
+                    </a>
+                </div>
+
+                <div class="col-md-offset-7 col-md-1">
+                    <a href='@Url.Action("GetUserCartProducts","Product")'>
+                        <img id="cart" src='@Url.Content("~/Images/General/cart.png")' />
+                    </a>
+                    <h2 id="amountItemsCart">@*1*@</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="nav" class="navbar-collapse collapse col-md-12">                
+                <ul style= "margin-left:110px;" class="nav navbar-nav navTag">                    
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "ProductsList", "Product")</li>                   
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>                    
+                    <li>@Html.ActionLink("Map", "Map", "Home")</li> 
+                    <li></li>
+
+                    @*regiter and login user is inside the menu*@
+                    @if (Request.IsAuthenticated)
+                    {
+                        
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm"}))
+                        {
+                            @Html.AntiForgeryToken()                            
+                           <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                            
+                        }
+                    }
+                    else
+                    {                      
+                       <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink"})</li>
+                       <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>                       
+
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        @*on the top oh each page i specify the user authorization that you have *@
+        <br />
+
+        @if (User.IsInRole("Admin"))
+        {
+            <p>
+                @Html.ActionLink("Hello " + User.Identity.GetUserName() +
+                " | Administrator!","Index", "Manage", routeValues: null,
+                htmlAttributes: new { title = "Manage" })
+            </p>
+        }
+        else if (User.IsInRole("Customer"))
+        {
+            <p>
+                @Html.ActionLink("Hello " + User.Identity.GetUserName() +
+                " | Customer!", "Index", "Manage", routeValues: null,
+                htmlAttributes: new { title = "Manage" })                
+            </p>
+        }
+        else
+        {
+            <p>
+                @Html.ActionLink("Hello " + User.Identity.GetUserName() +
+                " | Guest!", "Index", "Manage", routeValues: null,
+                htmlAttributes: new { title = "Manage" })
+            </p>
+        }
+        
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Shop Online</p>
+        </footer>
+    </div>
+    
+  
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")    
+    @RenderSection("scripts", required: false)  
+    
+
+
+</body>
+</html>

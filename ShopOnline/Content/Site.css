@@ -1,0 +1,111 @@
+﻿body {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    background-color:aliceblue;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/ /*login partial view*/
+#login {
+    margin-top: 25px;
+}
+
+
+/*Index view image*/
+#homePageImage {
+height:400px;
+width:1200px;
+}
+
+/* map display*/
+#mapDiv {
+    width: 800px;
+    height: 500px;
+}
+
+#direrctions-panel {
+    margin-top:-10px;
+    width: 400px;
+    height: 500px;
+    
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 400px;
+}
+
+
+
+/*nav bottom in the Layout*/
+#nav {
+    /* dark blue */
+    background-color: rgb(6, 39, 79);
+}
+
+/*space betwen each li element in
+    the layout*/
+.navTag {
+    margin-left: 200px;
+
+}
+
+li {
+    width: 150px;   
+    
+}
+
+/*bigger nav Layout*/
+#navtop {
+    /*medium blue*/
+    background-color: rgb(8, 70, 117);
+    height: 100px;
+}
+/*logo layout*/
+#logo { 
+    margin-top:15px;
+    width: 70px;
+    height: 70px;
+    margin-left:100px;
+   
+}
+
+
+/*cart layout*/
+#cart {
+    margin-top: 15px;
+    width: 70px;
+    height: 70px;
+    margin-left: 150px;
+}
+
+/* map search button*/
+#mapSearchButton {
+    width:50px;
+    margin-top:-34px;
+    margin-left:400px;
+}
+/*layout ul*/
+#logoutForm {
+    margin-top: 15px;
+    padding-left: 1000px;
+} 
+
+/*layout*/
+#amountItemsCart {
+    margin-top: -56px;
+    color: goldenrod;
+    margin-left: 170px;
+}

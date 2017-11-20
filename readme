@@ -1,0 +1,13 @@
+This project has the idea of an e-commerce web site, but for time reasons i did not have enough 
+time to finished.
+
+Customer  and  administrator registration  are working but i got an small problem while creating  administrator
+the problem is related with modelState.IsValid and is in AccountController\ Register Action so i commented
+(bad practice) is just to let you test the web site
+
+
+This web site is not responsive , so in my github account there is another project call
+CoffeShop that is responsive
+
+Thank you very much for your help , this time was great and i learned a lot , i hope this is not going to
+be last time that i can see you all and we can keep in touch.
