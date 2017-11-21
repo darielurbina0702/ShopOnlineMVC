@@ -18,7 +18,7 @@ namespace ShopOnline.Models
         }
     }
 
-    
+
     public class ApplicationRole : IdentityRole
     {
         public ApplicationRole() { }
@@ -34,6 +34,7 @@ namespace ShopOnline.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.CreateIfNotExists();
         }
 
         public static ApplicationDbContext Create()
@@ -41,6 +42,6 @@ namespace ShopOnline.Models
             return new ApplicationDbContext();
         }
 
-        
+
     }
 }
