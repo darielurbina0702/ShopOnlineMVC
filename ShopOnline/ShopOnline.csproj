@@ -193,37 +193,13 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Migrations\201711040134165_CartProductTableDeleted.cs" />
-    <Compile Include="Migrations\201711040134165_CartProductTableDeleted.Designer.cs">
-      <DependentUpon>201711040134165_CartProductTableDeleted.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711040445286_AddCustomerIdToProductTable.cs" />
-    <Compile Include="Migrations\201711040445286_AddCustomerIdToProductTable.Designer.cs">
-      <DependentUpon>201711040445286_AddCustomerIdToProductTable.cs</DependentUpon>
+    <Compile Include="Migrations\201711210457225_Initial.cs" />
+    <Compile Include="Migrations\201711210457225_Initial.Designer.cs">
+      <DependentUpon>201711210457225_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709300830532_Initial.cs" />
-    <Compile Include="Migrations\201709300830532_Initial.Designer.cs">
-      <DependentUpon>201709300830532_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710012009132_AddingProductsToDatabase.cs" />
-    <Compile Include="Migrations\201710012009132_AddingProductsToDatabase.Designer.cs">
-      <DependentUpon>201710012009132_AddingProductsToDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710080637206_RoleDesign.cs" />
-    <Compile Include="Migrations\201710080637206_RoleDesign.Designer.cs">
-      <DependentUpon>201710080637206_RoleDesign.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710082304049_AddCartProductTable.cs" />
-    <Compile Include="Migrations\201710082304049_AddCartProductTable.Designer.cs">
-      <DependentUpon>201710082304049_AddCartProductTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710082306465_AddCustomerTable.cs" />
-    <Compile Include="Migrations\201710082306465_AddCustomerTable.Designer.cs">
-      <DependentUpon>201710082306465_AddCustomerTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -337,26 +313,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709300830532_Initial.resx">
-      <DependentUpon>201709300830532_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710012009132_AddingProductsToDatabase.resx">
-      <DependentUpon>201710012009132_AddingProductsToDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710080637206_RoleDesign.resx">
-      <DependentUpon>201710080637206_RoleDesign.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710082304049_AddCartProductTable.resx">
-      <DependentUpon>201710082304049_AddCartProductTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710082306465_AddCustomerTable.resx">
-      <DependentUpon>201710082306465_AddCustomerTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711040134165_CartProductTableDeleted.resx">
-      <DependentUpon>201711040134165_CartProductTableDeleted.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711040445286_AddCustomerIdToProductTable.resx">
-      <DependentUpon>201711040445286_AddCustomerIdToProductTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711210457225_Initial.resx">
+      <DependentUpon>201711210457225_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
